@@ -2,11 +2,13 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Vagapreview } from '../vagapreview';
 import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { VagaService } from '../vaga.service';
 
 @Component({
   selector: 'app-vaga-preview',
   standalone: true,
-  imports: [CommonModule, NgbToastModule],
+  imports: [CommonModule, NgbToastModule, RouterModule],
   template: `
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -16,25 +18,33 @@ import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
   <div class="card mb-3" style="max-width: 25rem;">
   <div class="card-header bg-transparent ">
     <img src="https://via.placeholder.com/50" alt="Logo" class="listing-photo"/>
-    <h2 class="listing-heading">{{Vagapreview.cargo}}</h2>
+    <h1 class="listing-heading">{{Vagapreview.nome_empresa}}</h1>
 
   </div>
 
 <div class="card-body">
-    <div>
-      <h5 class="card-title">{{Vagapreview.nome_empresa}}</h5>
+<h1 class="listing-heading">{{Vagapreview.cargo}}</h1>
+    <div class="sub-informations">
 
-      <H5>{{Vagapreview.localidade}}</H5>
+      <h3>{{Vagapreview.localidade}}</h3>
 
-      <h5>{{Vagapreview.data_pub | date:'MMMM-dd-YYYY'}}</h5>
+      <h3>{{Vagapreview.data_pub | date:'MMMM-dd-YYYY'}}</h3>
     </div>
 
-  <h5>Descrição:</h5> 
+  <div class="desc-container">
+    <h2>Descrição:</h2> 
     <p class="card-text">{{Vagapreview.descricao}}</p>
+  </div>
 
-  <h5>Requisitos</h5>
+  <h2>Requisitos</h2>
     <p>{{Vagapreview.requisitos}}</p>
 
+    <div class="footer-info">
+      <a [routerLink]="['/details', Vagapreview.id]">Abrir vaga.</a>
+      <button class="btn btn-primary">Aplicar para a Vaga</button>
+    </div>
+
+    
 </div>
 
 </div>
