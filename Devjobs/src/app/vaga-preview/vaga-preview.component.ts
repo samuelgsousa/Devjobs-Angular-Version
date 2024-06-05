@@ -28,6 +28,8 @@ import { RouterModule } from '@angular/router';
       <h3>{{Vagapreview.localidade}}</h3>
 
       <h3>{{Vagapreview.data_pub | date:'MMMM-dd-YYYY'}}</h3>
+
+      <h3>{{Vagapreview.tipo}}</h3>
     </div>
 
   <div class="desc-container">
@@ -43,7 +45,7 @@ import { RouterModule } from '@angular/router';
     </ul>
 
     <div class="footer-info">
-      <a [routerLink]="['/details', Vagapreview.id]"><button class="btn btn-primary">Aplicar para a Vaga</button></a>
+      <a [routerLink]="['/details', Vagapreview.id]"><button class="btn btn-primary">Ver mais</button></a>
       
     </div>
 

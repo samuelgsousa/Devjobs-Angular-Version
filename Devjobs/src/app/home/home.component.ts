@@ -17,11 +17,13 @@ import { VagaService } from '../vaga.service';
   
     <div class="d-flex" role="search" id="search">
           <div id="search-bar">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search" #filter>
-            <button class="btn btn-outline-success" (click)="filterResults(filter.value)">Search</button>
+            <input class="form-control" type="search" placeholder="Busca por local ou cargo" aria-label="Search" #filter>
+            <button class="btn btn-outline-primary" (click)="filterResults(filter.value)">Buscar</button>
           </div>
+
+          
     </div>
-  
+   
   </section>
   
   <section class="results">
@@ -52,7 +54,7 @@ export class HomeComponent {
     }
 
     this.filteredVagasList = this.vagaPreviewList.filter((vagaPreview) => 
-    vagaPreview?.localidade.toLowerCase().includes(text.toLowerCase())
+    vagaPreview?.cargo.toLowerCase().includes(text.toLowerCase()) || vagaPreview?.localidade.toLowerCase().includes(text.toLowerCase())
     )
   }
 

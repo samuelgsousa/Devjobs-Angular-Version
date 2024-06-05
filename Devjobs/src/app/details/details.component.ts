@@ -12,7 +12,10 @@ import { VagaService } from '../vaga.service';
   selector: 'app-details',
   standalone: true,
   imports: [CommonModule, NgbToastModule, VagaPreviewComponent], 
-  template:`<body class="bg-teaser">
+  template:`
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <body class="bg-teaser">
     
                <div class="title">
                  <img src="https://via.placeholder.com/120" alt="" />
@@ -26,7 +29,7 @@ import { VagaService } from '../vaga.service';
                   <div className="cabecalho_vaga">
                       <div>
                          <h1>{{vagaPreview?.cargo}}</h1>
-                          <h2 id="data">{{vagaPreview?.data_pub | date:'MMMM-dd-YYYY'}} - {{vagaPreview?.localidade}}</h2>
+                          <h2 id="data">{{vagaPreview?.data_pub | date:'MMMM-dd-YYYY'}} - {{vagaPreview?.localidade}} - {{vagaPreview?.tipo}}</h2>
     
                       </div>
     
