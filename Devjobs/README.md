@@ -1,3 +1,5 @@
+<a href="../Devjobs/src/index.html">ScoreCraft</a>
+Projeto desenvolvido para estudos de Angular, Mysql e Typescript
 # Devjobs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
