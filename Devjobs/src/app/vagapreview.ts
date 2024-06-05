@@ -7,5 +7,5 @@ export interface Vagapreview {
     descricao: string
     localidade: string
     tipo: string
-    requisitos: Array<string>
+    requisitos: Array<Object>
 }

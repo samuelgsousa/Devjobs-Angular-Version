@@ -1,3 +1,4 @@
+import { NgbToastModule } from '@ng-bootstrap/ng-bootstrap';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
@@ -5,24 +6,53 @@ import { Vagapreview } from '../vagapreview';
 import { VagaPreviewComponent } from '../vaga-preview/vaga-preview.component';
 import { VagaService } from '../vaga.service';
 
+
+
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule, VagaPreviewComponent], 
-  template:`
-  <article>
-    <img [src]="vagaPreview?.logo" alt="">
-    <section>
-      <h2>{{vagaPreview?.cargo}}</h2>
-    </section>
-  </article>
+  imports: [CommonModule, NgbToastModule, VagaPreviewComponent], 
+  template:`<body class="bg-teaser">
+    
+               <div class="title">
+                 <img src="https://via.placeholder.com/120" alt="" />
+                 <div className="website">
+                     <h1>{{vagaPreview?.nome_empresa}}</h1>
+                     <h2> <a href="https://portifolio-seven-wine.vercel.app/content/index.html" target='_blank'>{{vagaPreview?.nome_empresa}}.com</a> </h2>
+                 </div>
+              </div>
+    
+              <article>
+                  <div className="cabecalho_vaga">
+                      <div>
+                         <h1>{{vagaPreview?.cargo}}</h1>
+                          <h2 id="data">{{vagaPreview?.data_pub | date:'MMMM-dd-YYYY'}} - {{vagaPreview?.localidade}}</h2>
+    
+                      </div>
+    
+                  </div>
+                  <p>{{vagaPreview?.descricao}}</p>
+              <h1>Requisitos:</h1>
+                  <ul class="requisitos">
+                  <li *ngIf="vagaPreview?.requisitos?.length === 0">Nenhum</li>
+                  <li *ngFor="let requisito of getReq(vagaPreview?.requisitos)">{{requisito}}</li>
+                  </ul>
+    
+                  <a href="https://portifolio-seven-wine.vercel.app/content/index.html" target='_blank'><button type="button" class="btn btn-success" size="sm">Aplicar para a vaga</button></a>
+              </article>
+  </body>
   `,
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
+
     route: ActivatedRoute = inject(ActivatedRoute)
     vagaService = inject(VagaService)
     vagaPreview: Vagapreview | undefined
+
+    getReq = (reqList: any): string[] => {
+      return reqList.map((req: { requisito: any; }) => req.requisito)
+        }
 
     constructor() {
       const vagaPreviewId = Number(this.route.snapshot.params['id'])

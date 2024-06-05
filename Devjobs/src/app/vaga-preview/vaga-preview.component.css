@@ -1,4 +1,5 @@
-@charset 'UTF-8';
+@charset "UTF-8";
+
 
 h1, h2{
     font-size: 1.5rem;
@@ -31,8 +32,26 @@ h3{
     -webkit-box-orient: vertical;
 }
 
-.footer-info{
-    display: flex;
-    justify-content: left;
+.requisitos{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-info{
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+}
+
+
+
 
