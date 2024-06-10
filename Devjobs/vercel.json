@@ -1,11 +1,10 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "angular.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist/[nome-do-seu-projeto]"
+        "distDir": "dist/Devjobs"
       }
     }
   ],
