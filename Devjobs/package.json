@@ -7,7 +7,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "^18.0.3",
     "@angular/animations": "^18.0.2",
     "@angular/common": "^18.0.2",
     "@angular/compiler": "^18.0.2",
@@ -18,10 +17,11 @@
     "@angular/platform-server": "^18.0.2",
     "@angular/router": "^18.0.2",
     "@angular/ssr": "^18.0.3",
-    "@ng-bootstrap/ng-bootstrap": "^16.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "express": "^4.19.2",
+    "rimraf": "^5.0.7",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.3",
     "zone.js": "~0.14.7"
