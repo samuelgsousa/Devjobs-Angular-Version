@@ -2,7 +2,7 @@
   "name": "devjobs",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "npm install --legacy-peer-deps",
+    "postinstall": "npm install",
     "build": "ng build"
   },
   "private": true,
