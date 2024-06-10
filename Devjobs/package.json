@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "prebuild": "chmod +x ./node_modules/.bin/ng",
-    "build": "ng build",
+    "build": "angular build --output public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs"
