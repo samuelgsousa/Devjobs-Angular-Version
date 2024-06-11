@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/devjobs",
-            "baseHref": "/"
+            "baseHref": "/Devjobs"
           },
           "configurations": {
             "production": {
