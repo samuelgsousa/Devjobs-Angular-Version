@@ -1,6 +1,5 @@
-import {Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {DetailsComponent} from './details/details.component';
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routeConfig: Routes = [
     {
@@ -10,7 +9,7 @@ const routeConfig: Routes = [
     },
     {
         path: 'details/:id',
-        component: DetailsComponent,
+        loadChildren: () => import('./details/details.module').then(m => m.DetailsModule),
         title: 'Home details',
     },
 ];
