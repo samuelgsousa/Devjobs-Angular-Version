@@ -14,7 +14,27 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/devjobs",
-            "baseHref": "/Devjobs/src"
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            },
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
