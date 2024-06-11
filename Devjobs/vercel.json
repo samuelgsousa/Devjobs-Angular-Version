@@ -9,6 +9,6 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "README.md" }
+    { "src": "/(.*)", "dest": "/Devjobs/src" }
   ]
 }
