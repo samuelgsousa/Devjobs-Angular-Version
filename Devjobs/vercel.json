@@ -9,6 +9,6 @@
     }
   ],
   "routes": [
-    { "src": "/Devjobs", "dest": "/" }
+    { "src": "/(.*)", "dest": "/" }
   ]
 }
