@@ -6,10 +6,10 @@
     "start": "ng serve",
     "prebuild": "chmod +x ./node_modules/.bin/ng",
     "postinstall": "chmod +x node_modules/.bin/ng",
-    "build": "[angular] build --output public",
+    "build": "node -v && npm -v && npm clean-install && next build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Devjobs": "node devjobs/server/server.mjs"
+    "serve:ssr:Devjobs": "node dist"
   },
   "private": true,
   "dependencies": {
