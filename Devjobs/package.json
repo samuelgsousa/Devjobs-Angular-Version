@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Devjobs": "node dist/devjobs/index.html"
+    "serve:ssr:Devjobs": "node index.html"
   },
   "private": true,
   "dependencies": {
