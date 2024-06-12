@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/devjobs",
             "index": "src/app/app.component.html",
-            "browser": "src/app/app.config.ts",
+            "browser": "src/app/app.config.server.ts",
             "polyfills": [
               "zone.js"
             ],
