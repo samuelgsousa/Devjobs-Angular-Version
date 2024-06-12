@@ -14,8 +14,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/devjobs",
-            "index": "src/app/app.component.ts",
-            "browser": "src/main.ts",
+            "index": "src/index.html",
+            "browser": "src/main.server.ts",
             "polyfills": [
               "zone.js"
             ],
