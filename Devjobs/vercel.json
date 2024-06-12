@@ -2,10 +2,10 @@
   "version": 2,
   "builds": [
     {
-      "src": "build.sh",
+      "src": "angular.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist/Devjobs-Angular-Version"
       }
     }
   ],
