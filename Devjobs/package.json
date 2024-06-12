@@ -9,7 +9,7 @@
     "build": "node -v && npm -v && npm clean-install && next build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:Devjobs": "node devjobs/server/server.mjs"
+    "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs"
   },
   "private": true,
   "dependencies": {
