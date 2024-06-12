@@ -6,7 +6,7 @@
     "start": "ng serve",
     "prebuild": "chmod +x ./node_modules/.bin/ng",
     "postinstall": "chmod +x node_modules/.bin/ng",
-    "build": "node -v && npm -v && npm clean-install && next build",
+    "build": "[angular] build --output public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Devjobs": "node devjobs/server/server.mjs"
