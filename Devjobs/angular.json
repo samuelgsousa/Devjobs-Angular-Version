@@ -33,7 +33,7 @@
             "ssr": {
               "entry": "server.ts"
             },
-            "baseHref": "/Devjobs-Angular-Version/"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
