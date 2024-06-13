@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "docs",
             "index": "src/index.html",
-            "browser": "src/main.server.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -28,12 +28,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            },
-            "baseHref": "/samuelgsousa/Devjobs-Angular-Version/"
+            "baseHref": "/Devjobs-Angular-Version/"
           },
           "configurations": {
             "production": {

@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path=docs --base-href=/Devjobs-Angular-Version ",
-    "postbuild": "echo > docs/.nojekyll",
+    "build": "ng build --output-path=docs --base-href=/Devjobs-Angular-Version/",
+    "postbuild": "ngh --dir=docs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs"
