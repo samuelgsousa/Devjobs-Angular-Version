@@ -52,7 +52,7 @@ jobs:
       - name: Fazer upload dos artefatos para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '../docs'
+          path: './docs'
 
       - name: Deploy para GitHub Pages
         id: deployment
