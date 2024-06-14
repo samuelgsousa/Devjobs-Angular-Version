@@ -2,26 +2,20 @@
 name: Deploy static content to Pages
 
 on:
-  # Executa nos pushes direcionados para a branch principal
   push:
     branches: ["gh-pages"]
-
-  # Permite executar este workflow manualmente a partir da aba Actions
   workflow_dispatch:
 
-# Define permissões do GITHUB_TOKEN para permitir deployment para GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Permite apenas um deployment concorrente
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Job único para deploy
   deploy:
     environment:
       name: github-pages
@@ -30,9 +24,6 @@ jobs:
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
-
-      - name: Listar conteúdo do diretório
-        run: ls -la
 
       - name: Instalar Node.js
         uses: actions/setup-node@v4
