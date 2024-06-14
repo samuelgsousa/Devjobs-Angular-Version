@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "docs",
             "index": "src/index.html",
-            "browser": "src/main.server.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -24,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
