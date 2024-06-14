@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "docs",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.server.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -32,7 +33,7 @@
             "ssr": {
               "entry": "server.ts"
             },
-            "baseHref": "/Devjobs-Angular-Version/"
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
