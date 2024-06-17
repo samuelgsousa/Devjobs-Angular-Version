@@ -45,7 +45,7 @@ jobs:
 
       - name: Remover node_modules e package-lock.json
         run: rm -rf node_modules package-lock.json
-        working-directory: ../Devjobs
+        working-directory: ./Devjobs
 
       - name: Instalar dependências
         run: npm install
