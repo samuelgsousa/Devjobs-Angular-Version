@@ -41,11 +41,11 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
-        working-directory: ../Devjobs
+        working-directory: ./
 
       - name: Construir o projeto Angular
         run: npm run build
-        working-directory: ../Devjobs
+        working-directory: ./
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5
