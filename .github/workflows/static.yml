@@ -37,7 +37,7 @@ jobs:
           node-version: '20'
 
       - name: Navegar para o diretório correto
-        run: cd ../Devjobs
+        run: cd ./Devjobs
 
       - name: Instalar dependências
         run: npm install
