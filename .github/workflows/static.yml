@@ -2,20 +2,26 @@
 name: Deploy static content to Pages
 
 on:
+  # Executa nos pushes direcionados para a branch principal
   push:
     branches: ["gh-pages"]
+
+  # Permite executar este workflow manualmente a partir da aba Actions
   workflow_dispatch:
 
+# Define permissões do GITHUB_TOKEN para permitir deployment para GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Permite apenas um deployment concorrente
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
+  # Job único para deploy
   deploy:
     environment:
       name: github-pages
@@ -29,6 +35,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Navegar para o diretório correto
+        run: cd ../Devjobs
 
       - name: Instalar dependências
         run: npm install
@@ -44,7 +53,7 @@ jobs:
       - name: Fazer upload dos artefatos para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Devjobs/docs'
+          path: './docs'
 
       - name: Deploy para GitHub Pages
         id: deployment
