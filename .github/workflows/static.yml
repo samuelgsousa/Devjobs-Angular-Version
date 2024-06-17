@@ -37,15 +37,15 @@ jobs:
           node-version: '20'
 
       - name: Navegar para o diretório correto
-        run: cd ./Devjobs
+        run: cd ../
 
       - name: Instalar dependências
         run: npm install
-        working-directory: ./
+        working-directory: ./Devjobs
 
       - name: Construir o projeto Angular
         run: npm run build
-        working-directory: ./
+        working-directory: ./Devjobs
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5
