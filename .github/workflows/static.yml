@@ -39,9 +39,21 @@ jobs:
       - name: Navegar para o diretório correto
         run: cd ../
 
+      - name: Limpar cache do NPM
+        run: npm cache clean --force
+        working-directory: ./Devjobs
+
+      - name: Remover node_modules e package-lock.json
+        run: rm -rf node_modules package-lock.json
+        working-directory: ../Devjobs
+
       - name: Instalar dependências
         run: npm install
         working-directory: ./Devjobs
+        
+      - name: Instalar dependências
+        run: npm install
+        working-directory: ../Devjobs
 
       - name: Ajustar permissões para o comando ng
         run: chmod +x ./node_modules/.bin/ng
@@ -61,4 +73,4 @@ jobs:
 
       - name: Deploy para GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 
