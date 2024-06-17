@@ -50,10 +50,6 @@ jobs:
       - name: Instalar dependências
         run: npm install
         working-directory: ./Devjobs
-        
-      - name: Instalar dependências
-        run: npm install
-        working-directory: ../Devjobs
 
       - name: Ajustar permissões para o comando ng
         run: chmod +x ./node_modules/.bin/ng
