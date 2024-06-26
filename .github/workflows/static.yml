@@ -58,7 +58,6 @@ jobs:
 
       - name: Ajustar permissões para o comando ng
         run: chmod +x ./node_modules/.bin/ng
-        working-directory: ./Devjobs
 
       - name: Construir o projeto Angular
         run: npm run build
