@@ -13,9 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/Devjobs/src",
+            "outputPath": "./docs",
             "index": "src/index.html",
-            "browser": "src/main.server.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -33,7 +33,7 @@
             "ssr": {
               "entry": "server.ts"
             },
-            "baseHref": "/"
+            "baseHref": "/Devjobs/"
           },
           "configurations": {
             "production": {
@@ -93,6 +93,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
