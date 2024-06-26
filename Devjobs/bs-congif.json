@@ -1,0 +1,19 @@
+{
+    "port": 3000,
+    "server": {
+      "baseDir": "docs/browser",
+      "routes": {
+        "/Devjobs": "docs/browser"
+      },
+      "middleware": {
+        "1": {
+          "module": "connect-history-api-fallback",
+          "options": {
+            "index": "src/index.html",
+            "verbose": true
+          }
+        }
+      }
+    }
+  }
+  
