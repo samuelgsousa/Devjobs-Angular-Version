@@ -4,13 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href ./docs",
     "postbuild": "echo > docs/.nojekyll",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve:http": "http-server ./docs/browser -p 3000 -P http://localhost:3000?"
+    "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs"
   },
   "private": true,
   "dependencies": {
