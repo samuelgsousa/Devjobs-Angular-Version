@@ -36,20 +36,20 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Navegar para o diretório correto
-        run: cd ../
+      # - name: Navegar para o diretório correto
+      #   run: cd ../
 
       - name: Limpar cache do NPM
         run: npm cache clean --force
-        working-directory: ./
+        working-directory: ./Devjobs
 
       - name: Remover node_modules e package-lock.json
         run: rm -rf node_modules package-lock.json
-        working-directory: ./
+        working-directory: ./Devjobs
 
       - name: Instalar client
         run: npm install -g @angular/cli
-        working-directory: ./
+        working-directory: ./Devjobs
 
 
       - name: Instalar dependências
