@@ -40,6 +40,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
+              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -107,7 +108,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "cname": "your-custom-domain.com"  
+            "cname": "your-custom-domain.com"  // Se você estiver usando um domínio personalizado
           }
         },
         "lint": {
