@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs"
+    "serve:http": "http-server ./docs/browser -p 3000 -P http://localhost:3000?"
   },
   "private": true,
   "dependencies": {
