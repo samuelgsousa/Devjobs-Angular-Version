@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs"
+    "serve:ssr:Devjobs": "node dist/devjobs/server/server.mjs",
+    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/Devjobs-Angular-Version/"
   },
   "private": true,
   "dependencies": {
