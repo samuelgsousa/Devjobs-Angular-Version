@@ -60,7 +60,7 @@ jobs:
       - name: Fazer upload dos artefatos para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist'
+          path: 'dist/Devjobs'
 
       - name: Deploy para GitHub Pages
         id: deployment
