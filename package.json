@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build --output-path=dist/Devjobs --base-href /Devjobs/",
+    "build": "ng build --base-href dist",
     "postbuild": "echo > dist/.nojekyll",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start": "ng serve",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve:ssr:Devjobs": "node dist/Devjobs/server/server.mjs"
+    "serve:ssr:Devjobs": "node dist/server/server.mjs"
   },
   "private": true,
   "dependencies": {
