@@ -1,9 +1,9 @@
 {
     "port": 3000,
     "server": {
-      "baseDir": "dist",
+      "baseDir": "dist/browser",
       "routes": {
-        "/Devjobs": "dist"
+        "/Devjobs": "dist/browser"
       },
       "middleware": {
         "1": {
